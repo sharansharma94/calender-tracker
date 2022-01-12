@@ -5,10 +5,21 @@ function App() {
   return (
     <div className="App">
       <h1>Calender Tracker</h1>
-      <Container>
-        <input />
-        <button> sumbit</button>
-      </Container>
+      <form>
+        <Container>
+          <div>
+            <label htmlFor="title">Title</label>
+            <input name="title" />
+          </div>
+          <div>
+            <label htmlFor="desc">Description</label>
+            <input name="desc" />
+          </div>
+          <div>
+            <button> Submit</button>
+          </div>
+        </Container>
+      </form>
     </div>
   );
 }
