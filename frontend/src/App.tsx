@@ -1,25 +1,17 @@
 import "./App.css";
+import Task from "./Components/Task";
 import { Container } from "./StyledComponents/Container";
+import { Form } from "./StyledComponents/Form";
 
 function App() {
   return (
     <div className="App">
       <h1>Calender Tracker</h1>
-      <form>
+      <Form>
         <Container>
-          <div>
-            <label htmlFor="title">Title</label>
-            <input name="title" />
-          </div>
-          <div>
-            <label htmlFor="desc">Description</label>
-            <input name="desc" />
-          </div>
-          <div>
-            <button> Submit</button>
-          </div>
+          <Task></Task>
         </Container>
-      </form>
+      </Form>
     </div>
   );
 }
