@@ -1,18 +1,12 @@
 import "./App.css";
-import Task from "./Components/Task";
-import { Container } from "./StyledComponents/Container";
-import { Form } from "./StyledComponents/Form";
+import Content from "./Components/Content";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <div className="App">
-      <h1>Calender Tracker</h1>
-
-      <Form>
-        <Container>
-          <Task></Task>
-        </Container>
-      </Form>
+      <Header></Header>
+      <Content></Content>
     </div>
   );
 }
