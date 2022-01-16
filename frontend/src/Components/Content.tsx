@@ -1,11 +1,17 @@
 import { Card } from "../StyledComponents/Card";
 import { Container } from "../StyledComponents/Container";
 
-export default function Content() {
+interface Forms {
+  forms: string[];
+}
+
+export default function Content({ forms }: Forms) {
   return (
     <>
       <Container>
-        <Card>hello</Card>
+        {forms.map((form: string) => {
+          return <Card>{form}</Card>;
+        })}
       </Container>
     </>
   );
