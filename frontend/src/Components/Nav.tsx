@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Nav = styled.div`
   display: flex;
   /* position: absolute; */
+  justify-content: space-between;
   width: 100%;
   box-shadow: var(--chakra-shadows-none);
   background: none;

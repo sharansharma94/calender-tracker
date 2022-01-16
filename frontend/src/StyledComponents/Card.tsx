@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  width: 100%;
+  /* width: 100%; */
   background: linear-gradient(
       127.09deg,
       rgba(6, 11, 40, 0.94) 19.41%,
@@ -9,4 +9,8 @@ export const Card = styled.div`
     )
     border-box;
   border-radius: 20px;
+  margin: 10px;
+  min-height: calc(10vh + 40px);
+  min-width: 40%;
+  padding: 10px;
 `;
