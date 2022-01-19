@@ -11,6 +11,7 @@ export const Card = styled.div`
   border-radius: 20px;
   margin: 10px;
   min-height: calc(10vh + 40px);
-  min-width: 40%;
+  width: 40%;
   padding: 10px;
+  color: white;
 `;
