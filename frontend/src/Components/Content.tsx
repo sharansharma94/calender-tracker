@@ -17,6 +17,7 @@ import {
 } from "../StyledComponents/Item";
 import { Nav } from "./Nav";
 import { formatDateinLocal } from "../utils/formatter";
+import NewItem from "./NewItem";
 
 interface ContentProps {
   useItemHook?: () => {
@@ -24,11 +25,11 @@ interface ContentProps {
     isLoading: boolean;
     error: boolean;
   };
-  forms: string[];
+  showForm: boolean;
 }
 
 export default function Content({
-  forms,
+  showForm,
   useItemHook = useItems,
 }: ContentProps) {
   const { items, isLoading, error } = useItemHook();
@@ -44,6 +45,7 @@ export default function Content({
   return (
     <>
       <Container>
+        {showForm && <NewItem />}
         {items.map((item) => {
           return (
             <Card>
@@ -69,17 +71,6 @@ export default function Content({
                   </Container>
                 </ItemFooter>
               </ItemWrapper>
-
-              {/* <FormControl>
-                <FormLabel htmlFor="title">Title</FormLabel>
-                <Input id="title" type="title" />
-                <FormHelperText>Enter Title for todo </FormHelperText>
-              </FormControl>
-              <FormControl>
-                <FormLabel htmlFor="description">description</FormLabel>
-                <Input id="description" type="description" />
-                <FormHelperText>Enter description for todo </FormHelperText>
-              </FormControl> */}
             </Card>
           );
         })}

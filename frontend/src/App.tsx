@@ -4,16 +4,16 @@ import Content from "./Components/Content";
 import Header from "./Components/Header";
 
 function App() {
-  const [forms, setForms] = useState(["old"]);
+  const [showForm, setShowForm] = useState(false);
 
-  const handleButtonClick = (val: string) => {
-    setForms([...forms, val]);
+  const handleButtonClick = () => {
+    setShowForm(!showForm);
   };
 
   return (
     <div className="App">
       <Header handleButtonClick={handleButtonClick}></Header>
-      <Content forms={forms}></Content>
+      <Content showForm={showForm}></Content>
     </div>
   );
 }
