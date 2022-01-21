@@ -17,6 +17,7 @@ import {
 } from "../StyledComponents/Item";
 import { Nav } from "./Nav";
 import { formatDateinLocal } from "../utils/formatter";
+import NewItem from "./NewItem";
 
 interface ContentProps {
   useItemHook?: () => {
@@ -44,20 +45,7 @@ export default function Content({
   return (
     <>
       <Container>
-        {showForm && (
-          <Card>
-            <FormControl>
-              <FormLabel htmlFor="title">Title</FormLabel>
-              <Input id="title" type="title" />
-              <FormHelperText>Enter Title for todo </FormHelperText>
-            </FormControl>
-            <FormControl>
-              <FormLabel htmlFor="description">description</FormLabel>
-              <Input id="description" type="description" />
-              <FormHelperText>Enter description for todo </FormHelperText>
-            </FormControl>
-          </Card>
-        )}
+        {showForm && <NewItem />}
         {items.map((item) => {
           return (
             <Card>
