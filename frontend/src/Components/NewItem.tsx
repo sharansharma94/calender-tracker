@@ -1,8 +1,6 @@
 import {
   Button,
-  Container,
   FormControl,
-  FormHelperText,
   FormLabel,
   Input,
   Textarea,
@@ -12,11 +10,17 @@ import {
   Description,
   ItemFooter,
   ItemWrapper,
+  SubTitle,
   Title,
 } from "../StyledComponents/Item";
 import { Nav } from "./Nav";
 
 import styled from "styled-components";
+import {
+  Container,
+  ContainerColum,
+  SpaceBetweenItem,
+} from "../StyledComponents/Container";
 
 export default function NewItem() {
   return (
@@ -31,25 +35,28 @@ export default function NewItem() {
           </Title>
           <Button colorScheme="var(--chakra-colors-gray-800)">Save</Button>
         </Nav>
-        <>
+        <Description>
           <Textarea
             // value={value}
             // onChange={handleInputChange}
             placeholder="Add Description of the task"
             size="sm"
           />
-        </>
+        </Description>
 
         <ItemFooter>
-          <Container>
-            <h3>Duration</h3>
-            <Container>
-              <p>Estimated : </p>
-            </Container>
-            <Container>
-              <p>Actual : </p>
-            </Container>
-          </Container>
+          <ContainerColum>
+            <SubTitle>Duration</SubTitle>
+            <SpaceBetweenItem>
+              <div>
+                <p>Estimated : </p>
+              </div>
+              <div>
+                <p>Actual : </p>
+              </div>
+            </SpaceBetweenItem>
+            <SpaceBetweenItem></SpaceBetweenItem>
+          </ContainerColum>
         </ItemFooter>
 
         {/* <ItemFooter>

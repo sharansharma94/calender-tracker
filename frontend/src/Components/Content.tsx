@@ -5,7 +5,11 @@ import {
   Input,
 } from "@chakra-ui/react";
 import { Card } from "../StyledComponents/Card";
-import { Container } from "../StyledComponents/Container";
+import {
+  Container,
+  ContainerColum,
+  SpaceBetweenItem,
+} from "../StyledComponents/Container";
 import { useItems } from "../hooks/useItem";
 import { Item } from "../shared/types";
 import {
@@ -14,6 +18,7 @@ import {
   ItemWrapper,
   Date,
   ItemFooter,
+  SubTitle,
 } from "../StyledComponents/Item";
 import { Nav } from "./Nav";
 import { formatDateinLocal } from "../utils/formatter";
@@ -58,17 +63,19 @@ export default function Content({
                 <Description>{item.description}</Description>
 
                 <ItemFooter>
-                  <Container>
-                    <h3>Duration</h3>
-                    <Container>
-                      <p>Estimated : </p>
-                      {item.estimatedDuration}
-                    </Container>
-                    <Container>
-                      <p>Actual : </p>
-                      {item.actualDuration}
-                    </Container>
-                  </Container>
+                  <ContainerColum>
+                    <SubTitle>Duration</SubTitle>
+                    <SpaceBetweenItem>
+                      <div>
+                        <p>Estimated</p>
+                        {item.estimatedDuration}
+                      </div>
+                      <div>
+                        <p>Actual : </p>
+                        {item.actualDuration}
+                      </div>
+                    </SpaceBetweenItem>
+                  </ContainerColum>
                 </ItemFooter>
               </ItemWrapper>
             </Card>

@@ -2,11 +2,22 @@ import styled from "styled-components";
 
 export const Title = styled.h2`
   font-weight: 800;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: inherit;
   text-transform: capitalize;
 `;
-export const Description = styled.h2``;
+
+export const SubTitle = styled.h2`
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: inherit;
+  text-transform: capitalize;
+`;
+
+export const Description = styled.div`
+  width: 100%;
+  text-align: start;
+`;
 export const ItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
