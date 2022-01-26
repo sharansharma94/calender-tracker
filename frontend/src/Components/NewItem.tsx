@@ -49,33 +49,21 @@ export default function NewItem() {
             <SubTitle>Duration</SubTitle>
             <SpaceBetweenItem>
               <div>
-                <p>Estimated : </p>
+                <FormControl>
+                  <FormLabel htmlFor="estimated">Estimated </FormLabel>
+                  <Input id="estimated" type="estimated" />
+                </FormControl>
               </div>
               <div>
-                <p>Actual : </p>
+                <FormControl>
+                  <FormLabel htmlFor="actual">Actual</FormLabel>
+                  <Input id="actual" type="actual" />
+                </FormControl>
               </div>
             </SpaceBetweenItem>
             <SpaceBetweenItem></SpaceBetweenItem>
           </ContainerColum>
         </ItemFooter>
-
-        {/* <ItemFooter>
-          <Container>
-            <h3>Duration</h3>
-            <Container>
-              <FormControl>
-                <FormLabel htmlFor="estimated">Estimated </FormLabel>
-                <Input id="estimated" type="estimated" />
-              </FormControl>
-            </Container>
-            <Container>
-              <FormControl>
-                <FormLabel htmlFor="actual">Actual</FormLabel>
-                <Input id="actual" type="actual" />
-              </FormControl>
-            </Container>
-          </Container>
-        </ItemFooter> */}
       </ItemWrapper>
     </Card>
   );
