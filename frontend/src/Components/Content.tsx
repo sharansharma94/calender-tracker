@@ -1,9 +1,3 @@
-import {
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Input,
-} from "@chakra-ui/react";
 import { Card } from "../StyledComponents/Card";
 import {
   Container,
