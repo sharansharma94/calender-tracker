@@ -17,6 +17,7 @@ import {
 import { Nav } from "./Nav";
 import { formatDateinLocal } from "../utils/formatter";
 import NewItem from "./NewItem";
+import { FormLabel, HStack } from "@chakra-ui/react";
 
 interface ContentProps {
   useItemHook?: () => {
@@ -58,8 +59,8 @@ export default function Content({
 
                 <ItemFooter>
                   <ContainerColum>
-                    <SubTitle>Duration</SubTitle>
-                    <SpaceBetweenItem>
+                    <FormLabel>Duration</FormLabel>
+                    <HStack>
                       <div>
                         <p>Estimated</p>
                         {item.estimatedDuration}
@@ -68,7 +69,7 @@ export default function Content({
                         <p>Actual : </p>
                         {item.actualDuration}
                       </div>
-                    </SpaceBetweenItem>
+                    </HStack>
                   </ContainerColum>
                 </ItemFooter>
               </ItemWrapper>
